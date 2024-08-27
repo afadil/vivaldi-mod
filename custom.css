@@ -1,0 +1,86 @@
+/* ********** CONTAINER LAYOUT ************* */
+#main {
+    position: relative;
+    -webkit-app-region: drag;
+    padding: 10px;
+}
+
+.inner {
+    -webkit-app-region: no-drag;
+    border-radius: 9px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ********** MAIN BAR AUTOHIDE ************* */
+.mainbar {
+    border-radius: 12px;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    overflow: hidden;
+    transition: height 0.3s;
+    will-change: height;
+    background-color: transparent;
+    padding-top: 5px;
+}
+
+.mainbar:hover {
+    height: 50px !important;
+    z-index: 999999;
+    background-color: #e5e4fa;
+    /* background-color: var(--colorBgLighter) !important; */
+}
+
+
+/* ********** TAB BAR AUTOHIDE ************* */
+
+#tabs-container {
+    padding: 3px;
+    padding-top: 18px;
+}
+
+#tabs-tabbar-container {
+    width: 40px !important;
+    background-color: transparent;
+}
+
+.tabbar-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    overflow: hidden;
+    transition: width 0.9s;
+    will-change: width;
+    background-color: transparent;
+}
+
+.tabbar-wrapper:hover {
+    width: 40px !important;
+    z-index: 999999;
+    transition: width 0.3s;
+    will-change: width;
+    background-color: #e5e4fa;
+}
+
+.tab:not(.active) {
+    background-color: transparent !important;
+}
+
+/* COMMAND POPUP */
+#modal-bg.qc-modal>div {
+    border-radius: 12px;
+}
+
+#modal-bg .modal-wrapper {
+    background: #e5e4fa;
+}
+
+.quick-command-container .quick-commands {
+    background: #e5e4fa;
+}
